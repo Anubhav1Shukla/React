@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-//UseState basic intermidiate and advanced
+//UseState basic, intermidiate and advanced
 
 function UseState() {
 
@@ -20,8 +20,8 @@ function UseState() {
       <button onClick={()=>setValue((prev)=>prev-1)} className='px-2 py-1 mt-2 rounded-full text-xs bg-blue-500 text-white '>Sub-1</button> */}
       <h1>name: {val.name}</h1>
       <h2>banned: {val.isBanned.toString()}</h2>
-      <button onClick={()=>setValue({...val, isBanned: !val.isBanned})} className='px-3 py-1 bg-blue-500 rounded-full text-white'>Change</button>
-
+      {/* <button onClick={()=>setValue({...val, isBanned: !val.isBanned})} className='px-3 py-1 bg-blue-500 text-white text-xs rounded-full'>Change</button> */}
+      <button onClick={()=>setValue({...val, isBanned: !val.isBanned})} className={`px-3 py-1 ${val.isBanned ? "bg-blue-500" : "bg-red-500"} rounded-full text-white text-xs`}>Change</button>
     </div>
   )
 }
