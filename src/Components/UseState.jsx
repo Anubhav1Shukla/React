@@ -34,10 +34,18 @@ function UseState() {
 
        {/* useState Arrays */}
 
-        {val.map(item=><h1>{item*2}</h1>)}
+        {/* {val.map(item=><h1>{item*2}</h1>)} */}
 
-        <button onClick={()=>setVal(()=>val.filter((item,index)=>index!=val.length-1))} className='px-2 py-1 text-ts text-white rounded-full bg-blue-500'>Click</button>
+        {/* <button onClick={()=>setVal(()=>val.filter((item,index)=>index!=val.length-1))} className='px-2 py-1 text-ts text-white rounded-full bg-blue-500'>Click</button> */}
 
+
+        {/* useState Arrays 2nd*/}
+
+        {/* //Removal from Arrays */}
+
+        {val.map(item=><h1>{item}</h1>)}
+        {/* <button onClick={()=>setVal(()=>val.filter((item,index)=>index!=2))} className='px-2 py-1 text-ts text-white rounded-full bg-blue-500'>Click</button> */}
+        <button onClick={()=>setVal(()=>val.filter(item=> item%2!=0))} className='px-2 py-1 text-ts text-white rounded-full bg-blue-500'>Click</button>
     </div>
   )
 }
