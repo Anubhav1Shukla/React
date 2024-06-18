@@ -9,7 +9,14 @@ function UseState() {
     // const [val,setValue]=useState(0);
     // const [val,setValue]=useState({name:"Anubhav Shukla", isBanned:false});
     // const [val,setVal]=useState({name:"Anubhav Shukla", age:20})
-       const [val,setVal]=useState([1,2,3,4,5,6]);
+    // const [val,setVal]=useState([1,2,3,4,5,6]);
+
+      const [val,setVal]=useState([
+        {name:"Anubhav Shukla", age:20},
+        {name:"Pihu", age:21},
+        {name:"Tanay", age:23}
+      ]);
+
   return (
     <div className='p-5'>
       {/* <h1>{score}</h1> */}
@@ -43,11 +50,22 @@ function UseState() {
 
         {/* //Removal from Arrays */}
 
-        {val.map(item=><h1>{item}</h1>)}
+        {/* {val.map(item=><h1>{item}</h1>)} */}
         {/* <button onClick={()=>setVal(()=>val.filter((item,index)=>index!=2))} className='px-2 py-1 text-ts text-white rounded-full bg-blue-500'>Click</button> */}
         {/* <button onClick={()=>setVal(()=>val.filter(item=> item%2!=0))} className='px-2 py-1 text-ts text-white rounded-full bg-blue-500'>Click</button> */}
 
-        <button onClick={()=>setVal([...val,7])} className='px-2 py-1 text-ts text-white rounded-full bg-blue-500'>Click</button>
+        {/* <button onClick={()=>setVal([...val,7])} className='px-2 py-1 text-ts text-white rounded-full bg-blue-500'>Click</button> */}
+
+        {/* useState addition in object part2 */}
+
+        {val.map((item)=>(
+          <div>
+            <h1>{item.name}</h1>
+            <h2>{item.age}</h2>
+          </div>
+        ))}
+
+        <button onClick={()=>setVal(()=>val.map(item=>item.name === "Tanay"? ({name: "Tanay",age:24}) : item))}>Click</button>
 
     </div>
   )
