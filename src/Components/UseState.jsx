@@ -10,7 +10,7 @@ function UseState() {
     // const [val,setValue]=useState({name:"Anubhav Shukla", isBanned:false});
     // const [val,setVal]=useState({name:"Anubhav Shukla", age:20})
     // const [val,setVal]=useState([1,2,3,4,5,6]);
-    const [val,setValue]=useState(false);
+    // const [val,setValue]=useState(true);
   
       // const [val,setVal]=useState([
       //   {name:"Anubhav Shukla", age:20},
@@ -71,6 +71,14 @@ function UseState() {
        {/* UseState Hook */}
 
       {/* val:{val.toString()} */}
+
+      {/* print bahar jaao if val is false and print mat jao if val is true */}
+          {/* <h1>
+            {val==false ?"BAAHAR JAAO":"MAT JAAO"}
+          </h1>
+          <button onClick={()=>{setValue(()=>!val)}} className='px-2 py-1 bg-blue-400 rounded-md'>Change</button> */}
+
+            {/* practice create something */}
 
      </div> 
   )
