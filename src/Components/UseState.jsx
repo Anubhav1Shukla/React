@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { FaArrowRightLong } from "react-icons/fa6";
 
 //UseState basic, intermidiate and advanced
 
@@ -11,7 +12,7 @@ function UseState() {
     // const [val,setVal]=useState({name:"Anubhav Shukla", age:20})
     // const [val,setVal]=useState([1,2,3,4,5,6]);
     // const [val,setValue]=useState(true);
-  
+    const [val,setVal]=useState(false);
       // const [val,setVal]=useState([
       //   {name:"Anubhav Shukla", age:20},
       //   {name:"Pihu", age:21},
@@ -19,7 +20,7 @@ function UseState() {
       // ]);
 
   return (
-   <div className='w-full h-screen bg-zinc-300 flex justify-center items-center'>
+   <div className='w-full h-screen  flex justify-center items-center'>
       {/* <h1>{score}</h1> */}
       {/* <button onClick={()=>setScore(200)} className='px-2 py-1 mt-2 rounded-full text-xs bg-blue-500 text-white'>Change</button> */}
       {/* <h1>{banned.toString()}</h1> */}
@@ -79,9 +80,13 @@ function UseState() {
           <button onClick={()=>{setValue(()=>!val)}} className='px-2 py-1 bg-blue-400 rounded-md'>Change</button> */}
 
             {/* practice create something */}
-            <div className='w-60 h-32 bg-zinc-500 rounded overflow-hidden'>
-              <img className='w-full h-full object-cover' src="https://images.unsplash.com/photo-1589859509530-1bef96699d28?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="coder-img" />
+            <div className='relative w-60 h-32 rounded-md flex overflow-hidden'>
+              <img className={`shrink-0 transition-transform duration-200 ${val===false?"-translate-x-[0%]" : "-translate-x-[100%]"} w-full h-full object-cover`} src="https://images.unsplash.com/photo-1589859509530-1bef96699d28?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="coder-img" />
+              <img className={`shrink-0 transition-transform duration-200 ${val===false?"-translate-x-[0%]" : "-translate-x-[100%]"} w-full h-full object-cover`} src="https://images.unsplash.com/photo-1607798748738-b15c40d33d57?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="coder-img" />
               
+                <span onClick={()=>setVal(()=>!val)} className='w-10 h-10 absolute bottom-[0%] flex items-center justify-center bg-[#dadada8b] rounded-full bg-zinc-300 left-1/2 -translate-x-[50%] -translate-y-[50%]'>
+                <FaArrowRightLong size={".7em"} />
+              </span>
             </div>
      </div> 
   )
