@@ -19,7 +19,7 @@ function UseState() {
       // ]);
 
   return (
-   <div className='p-5'>
+   <div className='w-full h-screen bg-zinc-300 flex justify-center items-center'>
       {/* <h1>{score}</h1> */}
       {/* <button onClick={()=>setScore(200)} className='px-2 py-1 mt-2 rounded-full text-xs bg-blue-500 text-white'>Change</button> */}
       {/* <h1>{banned.toString()}</h1> */}
@@ -79,7 +79,10 @@ function UseState() {
           <button onClick={()=>{setValue(()=>!val)}} className='px-2 py-1 bg-blue-400 rounded-md'>Change</button> */}
 
             {/* practice create something */}
-
+            <div className='w-60 h-32 bg-zinc-500 rounded overflow-hidden'>
+              <img className='w-full h-full object-cover' src="https://images.unsplash.com/photo-1589859509530-1bef96699d28?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="coder-img" />
+              
+            </div>
      </div> 
   )
 }
