@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react'
+import { useForm } from 'react-hook-form'
 
 function FormHandling() {
 
@@ -20,6 +21,8 @@ function FormHandling() {
     // }
                     //Hook
 
+                  const {register, handleSubmit}=useForm();  
+
   return (
                 //UseRefrence
     // <form action="" onSubmit={handleSubmit}>
@@ -38,9 +41,13 @@ function FormHandling() {
 
 
         //Hook
-        <form action="">
-            
-        </form>
+            <div>
+                <form action="" onSubmit={handleSubmit(data=>console.log(data))}>
+                    <input {...register('name')} type="text" placeholder='name' />
+                    <input {...register('email')} type="email" placeholder='Email' />
+                    <input type="Submit" />
+                </form>
+            </div>
 
   )
 }
