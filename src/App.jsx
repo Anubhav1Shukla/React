@@ -2,8 +2,9 @@ import React, { useState } from "react"
 // import Card from "./Components/Card";
 // import UseState from "./Components/UseState";
 // import Props from "./Components/Props";
-import PropsEx from "./Components/PropsEx";
-import Navbar from "./Components/Navbar";
+// import PropsEx from "./Components/PropsEx";
+// import Navbar from "./Components/Navbar";
+import FormHandling from "./Components/FormHandling";
 function App(){
 
 
@@ -33,25 +34,25 @@ function App(){
 
     // Music Project
 
-    const data=[
-      {name: "Sajni Re", image: "https://images.unsplash.com/photo-1526218626217-dc65a29bb444?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", artist: "Arjit Singh",added: false},
-      {name: "Jai Mata di", image:"https://images.unsplash.com/photo-1460723237483-7a6dc9d0b212?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", artist: "Vishal Mishra",added: false},
-      {name: "Maa", image: "https://images.unsplash.com/photo-1565145368739-29e5a81be478?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", artist: "Lata Mangeshkar",added: false},
-      {name: "Devi Mata", image: "https://images.unsplash.com/photo-1524650359799-842906ca1c06?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", artist: "Jubin Nautiyal",added: false},
-      {name: "Hanuman Chalisha", image:"https://images.unsplash.com/photo-1507676385008-e7fb562d11f8?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", artist: "South Reddy",added: false},
-    ]
+    // const data=[
+    //   {name: "Sajni Re", image: "https://images.unsplash.com/photo-1526218626217-dc65a29bb444?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", artist: "Arjit Singh",added: false},
+    //   {name: "Jai Mata di", image:"https://images.unsplash.com/photo-1460723237483-7a6dc9d0b212?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", artist: "Vishal Mishra",added: false},
+    //   {name: "Maa", image: "https://images.unsplash.com/photo-1565145368739-29e5a81be478?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", artist: "Lata Mangeshkar",added: false},
+    //   {name: "Devi Mata", image: "https://images.unsplash.com/photo-1524650359799-842906ca1c06?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", artist: "Jubin Nautiyal",added: false},
+    //   {name: "Hanuman Chalisha", image:"https://images.unsplash.com/photo-1507676385008-e7fb562d11f8?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", artist: "South Reddy",added: false},
+    // ]
 
-      const[songData,setSongData]=useState(data);
+    //   const[songData,setSongData]=useState(data);
 
-      const handleClick = (index) =>{
-          setSongData((prev)=>{
-            return prev.map((item,itemIndex)=>{
-              if(itemIndex === index)
-                  return {...item,added: !item.added};
-              return item;
-            })
-          })
-      }
+    //   const handleClick = (index) =>{
+    //       setSongData((prev)=>{
+    //         return prev.map((item,itemIndex)=>{
+    //           if(itemIndex === index)
+    //               return {...item,added: !item.added};
+    //           return item;
+    //         })
+    //       })
+    //   }
 
   return (
     <>
@@ -72,15 +73,16 @@ function App(){
        
        {/* Props Exercise */}
 
-       <div className="w-full h-screen bg-zinc-200">
+       {/* <div className="w-full h-screen bg-zinc-200">
         <Navbar data={songData}/>
         <div className="px-20 flex flex-wrap gap-8 mt-12">
        {songData.map((obj,index)=>{
         return <PropsEx key={index} data={obj} handleClick={handleClick} index={index} />
        })}
         </div>
-       </div>
+       </div> */}
 
+        <FormHandling/>
 
     </>
   );
