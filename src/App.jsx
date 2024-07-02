@@ -4,7 +4,10 @@ import React, { useState } from "react"
 // import Props from "./Components/Props";
 // import PropsEx from "./Components/PropsEx";
 // import Navbar from "./Components/Navbar";
-import FormHandling from "./Components/FormHandling";
+// import FormHandling from "./Components/FormHandling";
+import FormCard from "./Components/FormCard";
+import FormCards from "./Components/FormCards";
+import Form from "./Components/Form";
 function App(){
 
 
@@ -54,6 +57,12 @@ function App(){
     //       })
     //   }
 
+
+        const [users,setUsers]=useState([])
+
+
+
+
   return (
     <>
      
@@ -82,7 +91,14 @@ function App(){
         </div>
        </div> */}
 
-        <FormHandling/>
+        {/* <FormHandling/> */}
+        
+        <div className="w-full h-screen bg-zinc-200 flex items-center justify-center">
+          <div className="container mx-auto">
+            <FormCards users={users}/>
+            <Form/>
+          </div>
+        </div>
 
     </>
   );
