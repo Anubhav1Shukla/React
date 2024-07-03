@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+
 // import Card from "./Components/Card";
 // import UseState from "./Components/UseState";
 // import Props from "./Components/Props";
@@ -10,8 +11,9 @@ import React, { useState } from "react"
 // import Form from "./Components/Form";
 
 
-import Nav from "./ComponentsII/Nav";
-import Routing from "./Utils/Routing";
+// import Nav from "./ComponentsII/Nav";
+// import Routing from "./Utils/Routing";
+// import Axios from "./Utils/axios";
 function App(){
 
 
@@ -111,11 +113,15 @@ function App(){
 
         {/* Routing */}
 
-        <>
+        {/* <>
          <Nav/>
 
          <Routing/>
-        </>
+        </> */}
+
+
+
+
 
     </>
   );
