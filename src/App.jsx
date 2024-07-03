@@ -5,7 +5,7 @@ import React, { useState } from "react"
 // import PropsEx from "./Components/PropsEx";
 // import Navbar from "./Components/Navbar";
 // import FormHandling from "./Components/FormHandling";
-import FormCard from "./Components/FormCard";
+// import FormCard from "./Components/FormCard";
 import FormCards from "./Components/FormCards";
 import Form from "./Components/Form";
 function App(){
@@ -60,8 +60,12 @@ function App(){
 
         const [users,setUsers]=useState([])
 
-
-
+      const handleFormSubmitData=(data)=>{
+          setUsers([...users,data])
+      }
+       const handleRemove=(id)=>{
+        setUsers(()=>users.filter((item,index)=>index!=id))
+       }
 
   return (
     <>
@@ -95,8 +99,8 @@ function App(){
         
         <div className="w-full h-screen bg-zinc-200 flex items-center justify-center">
           <div className="container mx-auto">
-            <FormCards users={users}/>
-            <Form/>
+            <FormCards handleRemove={handleRemove} users={users}/>
+            <Form handleFormSubmitData={handleFormSubmitData}/>
           </div>
         </div>
 
