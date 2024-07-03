@@ -6,8 +6,12 @@ import React, { useState } from "react"
 // import Navbar from "./Components/Navbar";
 // import FormHandling from "./Components/FormHandling";
 // import FormCard from "./Components/FormCard";
-import FormCards from "./Components/FormCards";
-import Form from "./Components/Form";
+// import FormCards from "./Components/FormCards";
+// import Form from "./Components/Form";
+
+
+import Nav from "./ComponentsII/Nav";
+import Routing from "./Utils/Routing";
 function App(){
 
 
@@ -58,14 +62,14 @@ function App(){
     //   }
 
 
-        const [users,setUsers]=useState([])
+      //   const [users,setUsers]=useState([])
 
-      const handleFormSubmitData=(data)=>{
-          setUsers([...users,data])
-      }
-       const handleRemove=(id)=>{
-        setUsers(()=>users.filter((item,index)=>index!=id))
-       }
+      // const handleFormSubmitData=(data)=>{
+      //     setUsers([...users,data])
+      // }
+      //  const handleRemove=(id)=>{
+      //   setUsers(()=>users.filter((item,index)=>index!=id))
+      //  }
 
   return (
     <>
@@ -97,12 +101,21 @@ function App(){
 
         {/* <FormHandling/> */}
         
-        <div className="w-full h-screen bg-zinc-200 flex items-center justify-center">
+        {/* <div className="w-full h-screen bg-zinc-200 flex items-center justify-center">
           <div className="container mx-auto">
             <FormCards handleRemove={handleRemove} users={users}/>
             <Form handleFormSubmitData={handleFormSubmitData}/>
           </div>
-        </div>
+        </div> */}
+
+
+        {/* Routing */}
+
+        <>
+         <Nav/>
+
+         <Routing/>
+        </>
 
     </>
   );
