@@ -1,0 +1,19 @@
+Developer problem 
+Debugging a TypeError : Cannot read property 'X' of undifined.
+
+
+var obj ={};
+
+obj.name    :-> esme err nahi aayega bhale hi name define na ho 
+obj.name.first :- esme err  aayega jab tum ek object jo exit nahi karta uske andar kisi object jo na ho tab error show karta hai type error
+
+
+how to handle
+isko check karne ke liye hame conditional chanining ka use karna padta hai
+obj?.name?.first :->console me error nahi aayega 
+jab ham ise console me print karenge tan ye error show karega (undifined)
+
+Handling Asynchronous Opertations
+Working with local storage
+blocking scroll until something happens
+custom tooltip 
