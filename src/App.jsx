@@ -1,10 +1,17 @@
+import React, { useState } from "react";
+import { Link, Route, Routes } from "react-router-dom";
 
-import axios from "axios";
-import { Routes,Route,Link } from "react-router-dom";
+import Home1 from "./ComponentsIII/Home1";
+import User from "./ComponentsIII/User";
+import About from "./ComponentsIII/About";
+import UserDetails from "./ComponentsIII/UserDetails";
 
-import Home from "./ComponentsIII/Home";
-import Show from "./ComponentsIII/Show";
-import Services from "./ComponentsIII/Services";
+// import axios from "axios";
+// import { Routes,Route,Link } from "react-router-dom";
+
+// import Home from "./ComponentsIII/Home";
+// import Show from "./ComponentsIII/Show";
+// import Services from "./ComponentsIII/Services";
 // import Card from "./Components/Card";
 // import UseState from "./Components/UseState";
 // import Props from "./Components/Props";
@@ -141,7 +148,6 @@ import Services from "./ComponentsIII/Services";
 /* Axios */
 // }
 const App = () => {
-  
   // const addproducts = () => {
   //   const api = "https://fakestoreapi.com/products";
 
@@ -160,32 +166,45 @@ const App = () => {
   // };
 
   // console.log(products);
+
+  // context api
+
   return (
-    <div className="pt-[5%] pl-[5%]">
-    
-      {/* <br /> <br />
-      <button onClick={addproducts} className="px-5 py-2 bg-red-300 rounded-md">
-        Add New Product API
-      </button>
-      <hr className="my-10" /> */}
-
-
-      <nav className="flex justify-center gap-10">
+    // context API
+    <div className="p-1 w-1/2   m-auto pl-[5%]">
+      <nav className="my-10 flex justify-center gap-10 ">
         <Link to="/">Home</Link>
-        <Link to="/show">Show</Link>
-        <Link to="/services">Services</Link>
-
-        
-        
+        <Link to="/user">User</Link>
+        <Link to="/about">About</Link>
       </nav>
-      <hr />
+
       <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/show" element={<Show/>} />
-        <Route path="/services" element={<Services/>} />
+        <Route path="/" element={<Home1 />} />
+        <Route path="user" element={<User />} />
+        <Route path="/user/:id" element={<UserDetails />} />
+
+        <Route path="/about" element={<About />} />
       </Routes>
-     
     </div>
+
+    // {/* <br /> <br />
+    // <button onClick={addproducts} className="px-5 py-2 bg-red-300 rounded-md">
+    //   Add New Product API
+    // </button>
+    // <hr className="my-10" /> */}
+
+    // {/* <nav className="flex justify-center gap-10">
+    //   <Link to="/">Home</Link>
+    //   <Link to="/show">Show</Link>
+    //   <Link to="/services">Services</Link> */}
+
+    // {/* </nav> */}
+    // {/* <hr />
+    // <Routes>
+    //   <Route path="/" element={<Home/>} />
+    //   <Route path="/show" element={<Show/>} />
+    //   <Route path="/services" element={<Services/>} />
+    // </Routes> */}
   );
 };
 // {
