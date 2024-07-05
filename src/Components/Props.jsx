@@ -27,3 +27,9 @@ export default Props;
 
 // practice 
 // humara data actually main app componenet main hoga aur hum use props ke through pass karenge cards mein , har card par ek button hoga and hamein add friend button par click hone par alert dena hai
+
+
+
+// props drilling :---> ek jagah se dusri jagah data ko bhejna with the help of props that is caled data drilling 
+// image :---> https://res.cloudinary.com/practicaldev/image/fetch/s--YWOuVoW6--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/sx5c2nw5nideoz5vqe8q.png
+// Data flow from parent to child only 
