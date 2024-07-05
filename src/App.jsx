@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import { Link, Route, Routes } from "react-router-dom";
+import React from "react";
+// import { Link, Route, Routes } from "react-router-dom";
 
-import Home1 from "./ComponentsIII/Home1";
-import User from "./ComponentsIII/User";
-import About from "./ComponentsIII/About";
-import UserDetails from "./ComponentsIII/UserDetails";
+// import Home1 from "./ComponentsIII/Home1";
+// import User from "./ComponentsIII/User";
+// import About from "./ComponentsIII/About";
+// import UserDetails from "./ComponentsIII/UserDetails";
 
 // import axios from "axios";
 // import { Routes,Route,Link } from "react-router-dom";
@@ -22,8 +22,8 @@ import UserDetails from "./ComponentsIII/UserDetails";
 // import FormCards from "./Components/FormCards";
 // import Form from "./Components/Form";
 
-// import Nav from "./ComponentsII/Nav";
-// import Routing from "./Utils/Routing";
+import Nav from "./ComponentsII/Nav";
+import Routing from "./Utils/Routing";
 
 // function App(){
 
@@ -136,18 +136,38 @@ import UserDetails from "./ComponentsIII/UserDetails";
 /* Routing */
 // }
 
-// {
-/* <>
+
+
+const App = () => {
+  return (
+    <div>
+      <>
          <Nav/>
 
          <Routing/>
-        </> */
-// }
+        </> 
+    </div>
+  )
+}
+
+
+
+
+
+
+
+// {
+// <>
+//          <Nav/>
+
+//          <Routing/>
+//         </> 
+// };
 
 // {
 /* Axios */
 // }
-const App = () => {
+// const App = () => {
   // const addproducts = () => {
   //   const api = "https://fakestoreapi.com/products";
 
@@ -169,23 +189,23 @@ const App = () => {
 
   // context api
 
-  return (
-    // context API
-    <div className="p-1 w-1/2   m-auto pl-[5%]">
-      <nav className="my-10 flex justify-center gap-10 ">
-        <Link to="/">Home</Link>
-        <Link to="/user">User</Link>
-        <Link to="/about">About</Link>
-      </nav>
+  // return (
+  //   // context API
+  //   <div className="p-1 w-1/2   m-auto pl-[5%]">
+  //     <nav className="my-10 flex justify-center gap-10 ">
+  //       <Link to="/">Home</Link>
+  //       <Link to="/user">User</Link>
+  //       <Link to="/about">About</Link>
+  //     </nav>
 
-      <Routes>
-        <Route path="/" element={<Home1 />} />
-        <Route path="user" element={<User />} />
-        <Route path="/user/:id" element={<UserDetails />} />
+  //     <Routes>
+  //       <Route path="/" element={<Home1 />} />
+  //       <Route path="user" element={<User />} />
+  //       <Route path="/user/:id" element={<UserDetails />} />
 
-        <Route path="/about" element={<About />} />
-      </Routes>
-    </div>
+  //       <Route path="/about" element={<About />} />
+  //     </Routes>
+  //   </div>
 
     // {/* <br /> <br />
     // <button onClick={addproducts} className="px-5 py-2 bg-red-300 rounded-md">
@@ -205,8 +225,8 @@ const App = () => {
     //   <Route path="/show" element={<Show/>} />
     //   <Route path="/services" element={<Services/>} />
     // </Routes> */}
-  );
-};
+//   );
+// };
 // {
 /* </>
   );
