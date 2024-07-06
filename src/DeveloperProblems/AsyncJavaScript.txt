@@ -1,0 +1,21 @@
+ASYNC JS 
+
+
+
+Aisa koi bhi code jise kuch time lagta hai JS me use bydefault in most cases async code maan kar side stack me daal diya jata hai  
+settimeout:-->Settimeout ka code kuchh der baad chalta hai 
+setinterval:-->Setinterval ka code kuchh der baad chalta baar baar ek particular interval time mein 
+Fetch API:-->Ye kisi aur url(API) par jaa kar kuchh der data laayega ya data humaare pass se us url(API) par lekar jaayega
+Axios (or other HTTP Libraries):-->Ye thoda jayde developer friendly hai ye bhi fetch API ka kaam karega 
+promise:-->Ye jaanab ke andar jo code likhoge  wo apna kaam karega aur ye khud side stack me chale jayenge us code ko lekkar aur jab andar se code ke resolve kiya jayega tab ye chalenge 
+
+
+Callbacks
+Promises
+Async/Await
+Event Loop
+Callbacks vs Promises vs Async/Await
+Genrators 
+Error Handling in Asynchronous Code
+Web Workers
+AJAX
