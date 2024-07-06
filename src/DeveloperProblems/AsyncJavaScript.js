@@ -22,7 +22,7 @@
 //     console.log("Anubhav");
 // },2000);
 
-// Fetch API:-->Ye kisi aur url(API) par jaa kar kuchh der data laayega ya data humaare pass se us url(API) par lekar jaayega
+// Fetch API:-->Ye kisi aur url (API) par jaa kar kuchh der data laayega ya data humaare pass se us url(API) par lekar jaayega
 //kyuki ye internet par jayega aur fir data ko lekkar aayega to isme time lagta hai to by default hi js mein fetch ko async banaya gaya hai kyuki fetch ka kaam hai data laana wo bhi kisi url se an aisa ho sakta hai us url ki website slow ho aur agar fetch sync hota uske baad ka code tab tak nahi chalata jab uska data nahi jayega jiske karad problem hota
 fetch(`https://randomuser.me/api/`).then(raw => raw.json())
 .then(readable => console.log(readable));
