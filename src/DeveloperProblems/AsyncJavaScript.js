@@ -49,6 +49,22 @@
 //dikkat aayi to catch chalega and waiting ki jagah rejected likh jayega
 
 
+const parchi=new Promise(function(resolve,reject){
+    fetch(`https://randomuser.me/api/`)
+    .then(raw => raw.json())
+    .then(result => {
+        if(result.results[0].gender === "female") resolve();
+        else reject();
+    });
+})
+
+parchi
+.then(function(){
+    console.log("hara button daba");
+})
+.catch(function(){
+    console.log("Laal button daba");
+})
 
 // Callbacks
 // Promises
