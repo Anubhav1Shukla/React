@@ -113,17 +113,56 @@
 
 // Async/Await-->
 
-async function abcd(){
-    let a = await fetch(`https://randomuser.me/api/`);
-    a=await a.json();
-    console.log(a);
-}
+// async function abcd(){
+//     let a = await fetch(`https://randomuser.me/api/`);
+//     a=await a.json();
+//     console.log(a);
+// }
 
 
-abcd();
+// abcd();
 // Event Loop
+
+// https://cdn.hashnode.com/res/hashnode/image/upload/v1679465144646/0ebd5972-fa46-4e32-986c-e44d11f7d750.png
 // Callbacks vs Promises vs Async/Await
-// Genrators
+//ek url se data lekar aao aur use console me show karo
 // Error Handling in Asynchronous Code
+
+// Genrators
+
+//aap program ke flow(excution) ko pause kar skate ho aur bol sakte ho ab agla step karo 
+//banta kaise hai genrator koi bhi normal function jiske aage tum *  laga doge vo genrator function ban jata hai
+
+// function* gen(){
+//     console.log("Started")
+//     yield 1;
+//     console.log("Pahla chal chuka");
+//     yield 2;
+//     console.log("Dusra chal chuka");
+//     yield 3;
+    
+// }
+
+
+// const ans=gen();
+// console.log(ans.next());
+// console.log(ans.next());
+// console.log(ans.next());
+
+// task---> 1-10 print
+
+function* allNums(){
+    for(var i=1; i<11; i++){
+        yield i;
+    }
+}
+const gen =allNums();
+console.log(gen.next().value);
+console.log(gen.next().value);
+console.log(gen.next().value);
+console.log(gen.next().value);
+
 // Web Workers
-// AJAX
+
+
+// AJAX --> through fetch and Axios
