@@ -163,6 +163,17 @@ console.log(gen.next().value);
 console.log(gen.next().value);
 
 // Web Workers
+// usally hamara code single threaded par chalta hai par kai baar kuch bade calculation perform
+//karne padte hai jiski wajah se aapka main thresd busy ho jaata hai yaa fir wo kaafi jaada loaded ho jaata hai aur aapke baaki tasks ki performance kam ho jati hai
+// is situaton ko aache se handle karne ke liye we use web workers,kaise aise aap chaho to apna koi task web worker ko bhej sakte ho jo ki doosre thread mein usko perform karega and aapka main thread efficiently bbakki cheejo ko handle karega 
+// aap apni js file se data send kr sakte ho and aap worker file data accept karoge and jo perform karna hai karoge and waha se data waapas main file bhejoge and main file mein waapas aacept karoge
+
+var nums =Array.from({length:10000000},(_,b)=>b+1)
+const worker=new Worker("worker.js");
+worker.postMessage(nums);
+worker.onmessage=function(data){
+    console.log(data.data);
+}
 
 
 // AJAX --> through fetch and Axios
