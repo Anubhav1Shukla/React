@@ -70,22 +70,57 @@
 // callback kuch bhi ahi  ek function ho jise pass kiya gya ho kisi aur function me aur jab vo function chale
 // to app us pass kiye gaye callback function ko chala paayenge  
 
-function abcd(a,b){
+// function abcd(a,b){
        
-        b();
-        console.log(a);
+//         b();
+//         console.log(a);
 
+// }
+// abcd(1,function(){
+//     console.log("Anubhav bhai CallBack chal gya hai console me check kar. ok");
+// })
+
+// callback pahli cheej to ek function hai ,app is function wo sab likhdo jo aapko chaalana ho jab answer aajaye ,aur ise tab chalao jab aapka async code chal chuka ho
+// task:--> users ka data magao and jab data aajaye to us data ke name, gender and email ko print karo
+
+// function getData(url, callback){
+//     fetch(url)
+//     .then(raw => raw.json())
+//     .then(result => {
+//         callback(result);
+//     })
+// }
+
+
+// getData(`https://randomuser.me/api/`,function(result){
+//         console.log(result.results[0].gender,result.results[0].email,result.results[0].name);
+// })
+
+// function doSomeAsyncTask(url,callback){
+//     fetch(url)
+//     .then(raw => raw.json())
+//     .then(result =>{ jab result aa jaye tab ye calback ko chaal dega anytha nahi chalayega
+//             callback();
+//     })
+// }
+
+// doSomeAsyncTask("Some URL",function(){
+
+// })
+
+
+
+
+// Async/Await-->
+
+async function abcd(){
+    let a = await fetch(`https://randomuser.me/api/`);
+    a=await a.json();
+    console.log(a);
 }
-abcd(1,function(){
-    console.log("Anubhav bhai CallBack chal gya hai console me check kar. ok");
-})
 
 
-
-
-
-// Promises
-// Async/Await
+abcd();
 // Event Loop
 // Callbacks vs Promises vs Async/Await
 // Genrators
