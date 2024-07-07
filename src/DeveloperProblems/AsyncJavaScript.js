@@ -49,24 +49,41 @@
 //dikkat aayi to catch chalega and waiting ki jagah rejected likh jayega
 
 
-const parchi=new Promise(function(resolve,reject){
-    fetch(`https://randomuser.me/api/`)
-    .then(raw => raw.json())
-    .then(result => {
-        if(result.results[0].gender === "female") resolve();
-        else reject();
-    });
-})
+// const parchi=new Promise(function(resolve,reject){
+//     fetch(`https://randomuser.me/api/`)
+//     .then(raw => raw.json())
+//     .then(result => {
+//         if(result.results[0].gender === "female") resolve();
+//         else reject();
+//     });
+// })
 
-parchi
-.then(function(){
-    console.log("hara button daba");
-})
-.catch(function(){
-    console.log("Laal button daba");
-})
+// parchi
+// .then(function(){
+//     console.log("hara button daba");
+// })
+// .catch(function(){
+//     console.log("Laal button daba");
+// })
 
 // Callbacks
+// callback kuch bhi ahi  ek function ho jise pass kiya gya ho kisi aur function me aur jab vo function chale
+// to app us pass kiye gaye callback function ko chala paayenge  
+
+function abcd(a,b){
+       
+        b();
+        console.log(a);
+
+}
+abcd(1,function(){
+    console.log("Anubhav bhai CallBack chal gya hai console me check kar. ok");
+})
+
+
+
+
+
 // Promises
 // Async/Await
 // Event Loop
